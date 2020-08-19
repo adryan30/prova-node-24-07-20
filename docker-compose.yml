@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  backend:
+    image: prova-node-24-07-20
+    build: .
+    environment:
+      NODE_ENV: production
+    depends_on:
+      - db
+    ports:
+      - 3000:3000
+    command: npm run start
+  db:
+    image: postgres:12
+    environment:
+      POSTGRES_DB: docker
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: docker
+    ports:
+      - 5432:5432
