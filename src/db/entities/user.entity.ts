@@ -16,7 +16,7 @@ export class User implements IUser {
   username: string;
 
   @IsNotEmpty({ message: 'Email não pode ser vazio' })
-  @IsEmail(null, { message: 'Email deve ser válido' })
+  @IsEmail({}, { message: 'Email deve ser válido' })
   @Column()
   email: string;
 }

@@ -12,7 +12,6 @@ export async function validateUserData(
   userData.name = body.name;
   userData.username = body.username;
   userData.email = body.email;
-
   validateOrReject(userData)
     .then(() => {
       next();
