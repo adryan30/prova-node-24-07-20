@@ -4,7 +4,16 @@ O projeto inicial é um cadastro de usuários em memória muito simples e sem ut
 
 ### Rodando o projeto
 
-`node src/index.js`
+```bash
+# Para iniciar em modo de produção
+yarn docker:prod
+
+# Para iniciar em modo de desenvolvimento
+yarn docker:dev
+
+# Para rodar os testes
+yarn docker:test
+```
 
 ## O que será avaliado?
 
